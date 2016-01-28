@@ -178,14 +178,14 @@ public class ExamplePanel extends JPanel {
         datePanel_.setBorder(tb);
         datePanel_.setToolTipText("Displays today's date and time.");
 
-        JLabel dateLabel = new JLabel("Today's Date: ");       
+        JLabel dateLabel = new JLabel("Today's Date:");       
 
 //         String template = "Time: {0}";
 //         String timeStr  = MessageFormat.format(template, I18nUtils.getLocale());
 //         JLabel timeLabel = new JLabel(timeStr);
         
         // Example of String concatenation below        
-        StringBuffer timeSB = new StringBuffer("Time: ");
+        StringBuffer timeSB = new StringBuffer("Time:");
         timeSB.append(I18nUtils.getLocale());
         JLabel timeLabel = new JLabel(timeSB.toString());
 
@@ -245,8 +245,8 @@ public class ExamplePanel extends JPanel {
         JLabel apartmentLabel = new JLabel(I18nUtils.getString("EXAM_APARTME_5"));
         JLabel cityLabel = new JLabel(I18nUtils.getString("EXAM_CITY_6"));
         JLabel zipLabel = new JLabel(I18nUtils.getString("EXAM_ZIPCODE_7"));
-        JLabel phoneLabel = new JLabel("Phone: ");
-        JLabel emailLabel = new JLabel("Email: ");
+        JLabel phoneLabel = new JLabel("Phone:");
+        JLabel emailLabel = new JLabel("Email:");
 
 
         JLabel street = new JLabel(street_);
