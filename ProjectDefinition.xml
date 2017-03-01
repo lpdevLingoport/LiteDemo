@@ -3,9 +3,9 @@
      is preserved -->
 <gzproject>
   <login>
-    <username>demo@lingoport.com</username>
-    <password>REPLACEABLE_PASSWORD_TOKEN</password>
-    <server>http://www.globalyzer.com/gzserver</server>
+    <username></username>
+    <password></password>
+    <server>https://www.globalyzer.com/gzserver</server>
   </login>
 
   <project-path>/var/lib/jenkins/jobs/Lingoport.LRMandLite/workspace</project-path>
@@ -19,7 +19,7 @@
       <!-- create and execute a single scan with this info -->
       <scan-name>Java</scan-name>
       <ruleset-name>Java Rule Set</ruleset-name>
-      <ruleset-owner>demo@lingoport.com</ruleset-owner>
+      <ruleset-owner>jeni@lingoport.com</ruleset-owner>
       <!-- Scans all files by default. Uncomment the following 
            to scan only specific directories and files -->
       <!--
