@@ -3,8 +3,9 @@
      is preserved -->
 <gzproject>
   <login>
-    <username>demo@lingoport.com</username>
-    <password>REPLACEABLE_PASSWORD_TOKEN</password>
+       <!-- Use .globalyzerrc -->
+    <username></username>
+    <password></password>
     <server>https://www.globalyzer.com/gzserver</server>
   </login>
 
