@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- All items should be allowed anywhere in the xml as long as the heirarchy
-     is preserved -->
 <gzproject>
   <login>
-       <!-- Use .globalyzerrc -->
+     <!-- Use .globalyzerrc -->
     <username></username>
     <password></password>
     <server>https://www.globalyzer.com/gzserver</server>
@@ -20,16 +18,7 @@
       <!-- create and execute a single scan with this info -->
       <scan-name>Java</scan-name>
       <ruleset-name>Java Rule Set</ruleset-name>
-      <ruleset-owner>litedemo@lingoport.com</ruleset-owner>
-      <!-- Scans all files by default. Uncomment the following 
-           to scan only specific directories and files -->
-      <!--
-      <scan-items>
-        <item>src/com/lingoport/demo/java/utils/</item>
-        <item>src/com/lingoport/demo/java/ExampleMain.java</item>
-        <item>src/com/lingoport/demo/java/ExamplePanel.java</item>
-      </scan-items>
-      -->
+      <ruleset-owner>jeni@lingoport.com</ruleset-owner>
     </scan>
   </scans>
 </gzproject>
