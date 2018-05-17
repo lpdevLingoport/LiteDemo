@@ -3,7 +3,7 @@
   <login>
      <!-- Use .globalyzerrc -->
     <username>demo@lingoport.com</username>
-    <password>fordemonstrationpurposes</password>
+    <password></password>
     <server>https://www.globalyzer.com/gzserver</server>
     <use-local-rulesets>false</use-local-rulesets>
     <optional>
