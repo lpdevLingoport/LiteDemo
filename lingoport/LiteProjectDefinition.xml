@@ -32,7 +32,7 @@
       <!-- create and execute a single scan with this info -->
       <scan-name>Java</scan-name>
       <ruleset-name>Java Rule Set</ruleset-name>
-      <ruleset-owner>jeni@lingoport.com</ruleset-owner>
+      <ruleset-owner>demo@lingoport.com</ruleset-owner>
       <encoding>systemDefault</encoding>
       <checks>
         <embedded-strings>true</embedded-strings>
