@@ -2,8 +2,8 @@
 <gzproject>
   <login>
      <!-- Use .globalyzerrc -->
-    <username></username>
-    <password></password>
+    <username>demo@lingoport.com</username>
+    <password>fordemonstrationpurposes</password>
     <server>https://www.globalyzer.com/gzserver</server>
     <use-local-rulesets>false</use-local-rulesets>
     <optional>
@@ -16,10 +16,10 @@
   
 
 
-  <project-path>/var/lib/jenkins/jobs/Lingoport.Lite/workspace</project-path>
-  <project-name>Lingoport.Lite</project-name>
+  <project-path>/var/lib/jenkins/jobs/Lingoport.Lite_MysterO/workspace</project-path>
+  <project-name>Lingoport.Lite_MysterO</project-name>
 
-  <report-path>/home/jenkins/Lingoport_Data/Dashboard/Projects/Lingoport.Lite/GlobalyzerScans</report-path>
+  <report-path>/home/jenkins/Lingoport_Data/Dashboard/Projects/Lingoport.Lite_MysterO/GlobalyzerScans</report-path>
   <report-type>ScanDetailedXML</report-type>
 
   <data-dictionary-location>/var/lib/jenkins/.globalyzer</data-dictionary-location>
