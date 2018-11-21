@@ -54,13 +54,14 @@ public class ExamplePanel extends JPanel {
     JTextField emailJText_ = new JTextField(15);
     
     // Initial Test Data for Debugging
-    String name_ = "Jim Smith";  //$NON-NLS-L$ 
-    String street_ = "2025 Main St."; //$NON-NLS-L$ 
+    String name_ = "Jim Smith";  //$NON-NLS-1$ 
+    String street_ = "2025 Main St."; //$NON-NLS-1$ 
     String apartment_; 
-    String city_ = "Boulder, CO"; //$NON-NLS-L$ 
-    String zip_="80301";  //$NON-NLS-L$ 
+    String city_ = "Boulder, CO"; //$NON-NLS-1$ 
+    
     String phone_;
     String email_;
+    String zip_;
     
     
     Date today_ = new Date();
@@ -68,7 +69,7 @@ public class ExamplePanel extends JPanel {
 
     int counter_ = 0;
 
-    @SuppressWarnings("rawtypes")
+    @SuppressWarnings("rawtypes")  //$NON-NLS-1$
 	ArrayList addresses = new ArrayList(10);
 
 
@@ -77,6 +78,7 @@ public class ExamplePanel extends JPanel {
      */
     public ExamplePanel() {
         setLayout(new BorderLayout());
+        setFont(new Font("Courier New", Font.ITALIC, 18));
         initialize();
     }
 
@@ -103,13 +105,13 @@ public class ExamplePanel extends JPanel {
 
             public void actionPerformed(ActionEvent e) {
             	// To be implemented for Sprint 5
-            	nameJText_.setText("");
-            	streetJText_.setText("");
-            	apartmentJText_.setText("");
-            	cityJText_.setText("");
-            	zipJText_.setText("");
-            	phoneJText_.setText("");
-            	emailJText_.setText("");
+            	nameJText_.setText(""); //$NON-NLS-1$ 
+            	streetJText_.setText(""); //$NON-NLS-1$ 
+            	apartmentJText_.setText(""); //$NON-NLS-1$ 
+            	cityJText_.setText(""); //$NON-NLS-1$ 
+            	zipJText_.setText(""); //$NON-NLS-1$ 
+            	phoneJText_.setText(""); //$NON-NLS-1$ 
+            	emailJText_.setText(""); //$NON-NLS-1$ 
             	
                 // Clears the Text Fields
                 Debug.log("Next action taken; For now, clears the field. Implement in Sprint 5.");
@@ -166,6 +168,7 @@ public class ExamplePanel extends JPanel {
     private void createDatePanel() {
 
         datePanel_ = new JPanel(new GridBagLayout());
+        datePanel_.setFont(new Font("Courier New", Font.ITALIC, 32));
         
 //        String message = MessageFormat.format("{0} for Today: ", new Object[]{I18nUtils.getLocale()});
 //        TitledBorder tb = new TitledBorder(new LineBorder(Color.darkGray), message);
@@ -179,6 +182,7 @@ public class ExamplePanel extends JPanel {
         datePanel_.setToolTipText("Displays today's date and time.");
 
         JLabel dateLabel = new JLabel("Today's Date:");       
+        dateLabel.setFont(new Font("Courier New", Font.ITALIC, 18));
 
 //         String template = "Time: {0}";
 //         String timeStr  = MessageFormat.format(template, I18nUtils.getLocale());
@@ -188,6 +192,7 @@ public class ExamplePanel extends JPanel {
         StringBuffer timeSB = new StringBuffer("Time:");
         timeSB.append(I18nUtils.getLocale());
         JLabel timeLabel = new JLabel(timeSB.toString());
+        timeLabel.setFont(new Font("Courier New", Font.ITALIC, 18));
 
 
         //-- Lay out the components.
@@ -209,7 +214,7 @@ public class ExamplePanel extends JPanel {
         constraints.weightx = 0.0;
         
         // Fix the code by adding a locale, here French, which really should come from a Locale framework
-        // datePanel_.add(new JLabel(DateFormat.getDateInstance(DateFormat.FULL, I18nUtils.getLocale()).format(today_)), constraints); // $NON-NLS-L$ 
+        // datePanel_.add(new JLabel(DateFormat.getDateInstance(DateFormat.FULL, I18nUtils.getLocale()).format(today_)), constraints); // $NON-NLS-1$ 
         datePanel_.add(new JLabel(DateFormat.getDateInstance(DateFormat.FULL).format(today_)), constraints); 
 
         constraints.gridx = 2;
@@ -222,7 +227,7 @@ public class ExamplePanel extends JPanel {
         constraints.weightx = 1.0;
         
         // Fix the code by adding a locale, here French, which really should come from a Locale framework
-        // datePanel_.add(new JLabel(DateFormat.getTimeInstance(DateFormat.DEFAULT, I18nUtils.getLocale()).format(time_)), constraints); // $NON-NLS-L$ 
+        // datePanel_.add(new JLabel(DateFormat.getTimeInstance(DateFormat.DEFAULT, I18nUtils.getLocale()).format(time_)), constraints); // $NON-NLS-1$ 
 
         datePanel_.add(new JLabel(DateFormat.getTimeInstance(DateFormat.DEFAULT).format(time_)), constraints);
     }
@@ -236,15 +241,15 @@ public class ExamplePanel extends JPanel {
 
         infoPanel_ = new JPanel(new GridBagLayout());
         TitledBorder tb = new TitledBorder(new LineBorder(Color.darkGray),
-                                           I18nUtils.getString("EXAM_ADDRESS_1"));
+                                           I18nUtils.getString("EXAM_ADDRESS_1")); //$NON-NLS-1$ 
         infoPanel_.setBorder(tb);
-        infoPanel_.setToolTipText(I18nUtils.getString("EXAM_DISPLAY_2"));
+        infoPanel_.setToolTipText(I18nUtils.getString("EXAM_DISPLAY_2")); //$NON-NLS-1$ 
 
-        JLabel nameLabel = new JLabel(I18nUtils.getString("EXAM_NAME_3"));
-        JLabel streetLabel = new JLabel(I18nUtils.getString("EXAM_STREET_4"));
-        JLabel apartmentLabel = new JLabel(I18nUtils.getString("EXAM_APARTME_5"));
-        JLabel cityLabel = new JLabel(I18nUtils.getString("EXAM_CITY_6"));
-        JLabel zipLabel = new JLabel(I18nUtils.getString("EXAM_ZIPCODE_7"));
+        JLabel nameLabel = new JLabel(I18nUtils.getString("EXAM_NAME_3")); //$NON-NLS-1$ 
+        JLabel streetLabel = new JLabel(I18nUtils.getString("EXAM_STREET_4")); //$NON-NLS-1$ 
+        JLabel apartmentLabel = new JLabel(I18nUtils.getString("EXAM_APARTME_5")); //$NON-NLS-1$ 
+        JLabel cityLabel = new JLabel(I18nUtils.getString("EXAM_CITY_6")); //$NON-NLS-1$ 
+        JLabel zipLabel = new JLabel(I18nUtils.getString("EXAM_ZIPCODE_7")); //$NON-NLS-1$ 
         JLabel phoneLabel = new JLabel("Phone:");
         JLabel emailLabel = new JLabel("Email:");
 

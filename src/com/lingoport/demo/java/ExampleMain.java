@@ -1,5 +1,6 @@
 package com.lingoport.demo.java;
 
+import java.awt.Font;
 import java.util.Locale;
 
 import javax.swing.*;
@@ -19,10 +20,10 @@ public class ExampleMain {
     	// if should be given in the form fr_FR or en_US
     	// of de_DE_Pseudo with a variant
     	// (simplistic argument parsing)
-    	Locale locale = new Locale("en", "US"); // $NON-NLS-L$
+    	Locale locale = new Locale("en", "US"); // $NON-NLS-L$ //$NON-NLS-1$ //$NON-NLS-2$
     	if (args.length > 0) {
     		// try to split the string on _
-    		String localeStr[] = args[0].split("_");
+    		String localeStr[] = args[0].split("_"); //$NON-NLS-1$
     		
     		// Try to build with a variant
     		try {
@@ -51,7 +52,7 @@ public class ExampleMain {
         frame.getContentPane().add(panel);
         frame.pack();
         frame.setVisible(true);
-        String strTitle = "Example Address Book -- " + locale;
+        String strTitle = I18nUtils.getString("ExampleMain.3") + locale; //$NON-NLS-1$
         frame.setTitle(strTitle);
     }
 
