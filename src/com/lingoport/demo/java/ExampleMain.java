@@ -35,6 +35,7 @@ public class ExampleMain {
         			Locale candidateLocale = new Locale(localeStr[0], localeStr[1]);
         			locale = candidateLocale;
         		} catch (Exception ex) {
+        			locale = new Locale(localeStr[0]);
         			// If bad, just continue with the default locale
         		}			
 
